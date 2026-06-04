@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    name: myapp
+spec:
+  containers:
+  - name: myapp
+    image: nginx:latest
+    envFrom:
+    - configMapRef: 
+        name: demo
+    command:
+      - /bin/bash
+      - -c
+      - "printenv | grep -E 'key1|key2'"
+    resources:
+      limits:
+        memory: "64Mi"
+        cpu: "250m"
+  restartPolicy: "Never"

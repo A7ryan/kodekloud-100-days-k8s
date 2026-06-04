@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-t2q1
+spec:
+  selector:
+    matchLabels:
+      app: nginx-t2q1
+  template:
+    metadata:
+      labels:
+        app: nginx-t2q1
+    spec:
+      containers:
+      - name: nginx-t2q1
+        image: nginx:latest
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "250m"

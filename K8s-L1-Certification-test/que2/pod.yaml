@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: red-xfusion-t1q5
+  labels:
+    name: red-xfusion-t1q5
+spec:
+  initContainers:
+  - name: red-init-xfusion-t1q5
+    image: debian:latest
+    command:
+    - /bin/sh
+    - -c
+    - echo "Welcome!"
+  containers:
+  - name: red-main-xfusion-t1q5
+    image: debian:latest
+    command:
+    - /bin/sh
+    - -c
+    - sleep 1000
+    resources:
+      limits:
+        memory: "64Mi"
+        cpu: "250m"
+
+
+--- 
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: red-xfusion-t1q5
+  labels:
+    name: red-xfusion-t1q5
+spec:
+  initContainers:
+    - name: red-init-xfusion-t1q5
+      image: debian:latest
+      command:
+        - /bin/bash
+        - -c
+      args:
+        - echo "Welcome!"
+  containers:
+    - name: red-main-xfusion-t1q5
+      image: debian:latest
+      command:
+        - /bin/bash
+        - -c
+      args:
+        - sleep 1000
+      resources:
+        limits:
+          memory: "64Mi"
+          cpu: "250m"
+
+

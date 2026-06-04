@@ -1,0 +1,20 @@
+Recently, the Nautilus DevOps team identified performance 
+issues affecting certain applications on the Kubernetes cluster. 
+Analysis revealed resource constraints, 
+with some applications exhausting memory and CPU, 
+while others were overconsuming resources beyond their requirements. 
+To address this, the team plans to implement resource limits. Here are the details:
+
+Create a pod named httpd-pod-t3q6 
+and a container under it named as httpd-container-t3q6, 
+use httpd image with latest tag only 
+(remember to mention the tag i.e httpd:latest), 
+further set the following limits:
+
+Requests:
+
+Memory: 15Mi
+CPU: 100m
+Limits:
+Memory: 20Mi
+CPU: 100m

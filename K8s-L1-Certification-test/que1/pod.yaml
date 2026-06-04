@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dummy-nginx-nginx-t1q6
+  labels:
+    name: dummy-nginx-nginx-t1q6
+spec:
+  containers:
+  - name: dummy-nginx-nginx-t1q6
+    image: nginx:stable-alpine3.17-slim
+    resources:
+      limits:
+        memory: "64Mi"
+        cpu: "250m"

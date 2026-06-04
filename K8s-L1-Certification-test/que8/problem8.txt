@@ -1,0 +1,21 @@
+A DevOps engineer attempted to deploy a Python application 
+on the Kubernetes cluster. 
+Unfortunately, due to misconfigurations, 
+the application failed to launch. 
+Your task is to investigate and rectify the issues.
+
+
+Deployment and Service Details:
+
+Deployment Name: python-deployment-xfusion-t4q4
+Image Used: poroko/flask-demo-app
+Ensure that the deployment and service configurations 
+for this app are correctly deployed. 
+Configure the nodePort to be 32345, 
+and set the targetPort to match the default port of the Python Flask application.
+
+Your objective is to identify and correct any 
+misconfigurations affecting the deployment and service 
+of the Python application. 
+Once rectified, verify the application's accessibility through the App button.
+

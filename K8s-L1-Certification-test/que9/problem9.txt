@@ -1,0 +1,8 @@
+Upon investigating an issue with one of the applications 
+on the Kubernetes cluster, 
+the team discovered that the service was 
+configured with an incorrect node port. 
+We need to update the service as follows:
+
+
+Update service-t5q3 service to use node port 30099.

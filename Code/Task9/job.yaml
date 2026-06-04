@@ -1,0 +1,35 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: countdown-devops
+spec:
+  ttlSecondsAfterFinished: 100
+  template:
+    metadata:
+      name: countdown-devops
+    spec:
+      containers:
+      - name: container-countdown-devops
+        image: debian:latest
+        command: ["sleep", "5"]
+      restartPolicy: Never
+
+
+---
+
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: countdown-datacenter
+spec:
+  ttlSecondsAfterFinished: 100
+  template:
+    metadata:
+      name: countdown-datacenter
+    spec:
+      containers:
+      - name: container-countdown-datacenter
+        image: ubuntu:latest
+        command: ["sleep", "5"]
+      restartPolicy: Never
